@@ -1,0 +1,14 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url('https://www.themoviedb.org/?language=fr');
+
+:root {
+    --primary-color: rgb(4, 4, 58);
+    --secondary--color: rgb(127, 120, 120);
+}
+
+body {
+    background-color: var(--primary-color);
+}
