@@ -7,6 +7,11 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
+import './styles/pages/Accueil.scss';
+import './styles/pages/Films.scss';
+import './styles/components/NavBar.scss';
+import './styles/components/Footer.scss';
+import './styles/pages/Detail.scss';
 
 // start the Stimulus application
 import './bootstrap';
@@ -15,8 +20,4 @@ import 'tw-elements';
 
 
 import { registerReactControllerComponents } from '@symfony/ux-react';
-registerReactControllerComponents(require.context('./react/controllers', true, /\.(j|t)sx?$/));
-
-/*let API_key = "&api_key=db95773a7fb212ba790d71f6adac0e7e";
-let base_url = "http://api.themoviedb.org/3";
-let url = base_url + "/discover/movie?sort_by=popularity.desc" + API_key;*/
+registerReactControllerComponents(require.context('./react/controllers', true, /.(j|t)sx?$/));

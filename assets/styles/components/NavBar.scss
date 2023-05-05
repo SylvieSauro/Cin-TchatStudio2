@@ -1,0 +1,177 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #1f162e;
+    height: 120px;
+    display: flex;
+    text-align: center;
+}
+
+.header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    /* center the navBar horizontally */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    /* Centrer les éléments horizontalement */
+    align-items: center;
+    /* Centrer les éléments verticalement */
+    width: 100%;
+    margin-left: 80px;
+    padding: 0;
+    /* Supprimer le padding par défaut de la liste */
+}
+
+nav ul li {
+    flex: 1;
+    /* Prendre toute la largeur disponible */
+    text-align: center;
+    /* Centrer le texte */
+    margin-right: 0;
+    /* Supprimer la marge droite */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.2rem 0.6rem;
+    position: relative;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    height: 3px;
+    width: 0;
+    transform: translateX(50%);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover:before {
+    width: 100%;
+}
+
+nav ul li a:focus {
+    background-color: var(--secondary--color);
+    opacity: 0.2px;
+    border-radius: 20px;
+}
+
+nav ul li a:focus::before {
+    width: 0%;
+}
+
+.search-btn {
+    display: flex;
+}
+
+.inputText {
+    outline: none;
+
+    border: 1px solid var(--secondary--color);
+    border-radius: 2rem 0 0 2rem;
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--primary--color);
+    box-shadow: inset 0 5px 10px var(--secondary--color);
+}
+
+.inputText::placeholder {
+    color: white;
+    text-align: center;
+    padding: auto;
+}
+
+.dropdown {
+    position: relative;
+    /* Ajouter une position relative pour les éléments parent des dropdown */
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Ajouter une position relative pour les éléments toggle des dropdown */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    /* Ajouter un positionnement pour placer le menu dropdown en dessous */
+    left: 0;
+    /* Centrer le menu dropdown */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    display: block;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 20%;
+    background-color: var(--secondary--color);
+    color: white;
+
+}
+
+
+.dropdown-menu li:hover {
+    background-color: white;
+    color: var(--secondary--color);
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    color: var(--secondary--color);
+    text-decoration: none;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .header {
+        height: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .search-btn {
+        align-items: center;
+    }
+
+    .inputText {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+}

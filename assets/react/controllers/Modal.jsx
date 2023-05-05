@@ -1,6 +1,6 @@
 import React from 'react';
-import { useState } from 'react'
-import { Tab } from '@headlessui/react'
+import { useState } from 'react';
+import { Tab } from '@headlessui/react';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -11,15 +11,26 @@ export default function Example() {
     let [categories] = useState({
         "A louer": [
             {
+                /*   <div classname="movie">
+                           <img src="moment/Casper.jpg" classname="poster"></img>
+                           <div classname="movie-détails">
+                               <div classname="box">
+                                   <h4 classname="title">Movie title</h4>
+                                   <p classname="rating">9.7</p>
+                               </div>
+                               <div classname="overview">
+                                   <h1>overview</h1>
+                                   lorem blablabla ggggg, etc
+                               </div>*/
                 id: 1,
-                title: 'Does drinking coffee make you smarter?',
-                date: '5h ago',
-                commentCount: 5,
+                title: "Movie title",
+                date: '2h ago',
+                commentCount: 3,
                 shareCount: 2,
             },
             {
                 id: 2,
-                title: "So you've bought coffee... now what?",
+                title: "Movie title",
                 date: '2h ago',
                 commentCount: 3,
                 shareCount: 2,
