@@ -10,6 +10,7 @@ let base_url = "https://api.themoviedb.org/3";
 let url = base_url + "/discover/movie/?certification_country=US&certification=R&sort_by=vote_average.desc" + API_key;
 let arr = ["A louer", "A la tv", "Au cinema", "En streaming"];
 
+
 const Accueil = () => {
     const [search, setSearch] = useState();
     const [movieData, setData] = useState([]);
@@ -22,12 +23,7 @@ const Accueil = () => {
         }
     }*/
 
-    useEffect(() => {
-        fetch(url_set).then(res => res.json()).then(data => {
-            //console.log(data.results);
-            setData(data.results);
-        });
-    }, [url_set])
+
     const getData = (movieType) => {
         if (movieType == "A louer") {
             //url=base_url+""+API_key;
@@ -44,11 +40,19 @@ const Accueil = () => {
         setUrl(url);
     }
     const searchMovie = (evt) => {
+        <li key={movie1.info.id}></li>
         if (evt.key == "Enter") {
             url = base_url + "/search/movie?api_key=8c9c58852f51228f852afeb4acd18b2e&query=" + search;
             setUrl(url);
         }
     }
+
+    useEffect(() => {
+        fetch(url_set).then(res => res.json()).then(data => {
+            //console.log(data.results);
+            setData(data.results);
+        });
+    }, [url_set])
     return (
         <>
 
@@ -58,6 +62,8 @@ const Accueil = () => {
                 </div>
             </div>
             <br></br>
+
+
             <h1>Films du Moment</h1>
 
             <div className="menu1">

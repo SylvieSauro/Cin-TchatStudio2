@@ -6,6 +6,8 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
+import React from 'react';
+import Accueil from './react/controllers/Accueil';
 import './styles/app.scss';
 import './styles/pages/Accueil.scss';
 import './styles/pages/Films.scss';
@@ -21,3 +23,15 @@ import 'tw-elements';
 
 import { registerReactControllerComponents } from '@symfony/ux-react';
 registerReactControllerComponents(require.context('./react/controllers', true, /.(j|t)sx?$/));
+
+function app() {
+    return (
+        <>
+            <Accueil />
+        </>
+    );
+
+
+}
+
+export default app;

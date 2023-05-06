@@ -3,9 +3,9 @@ import React from 'react';
 const Filmmoment = () => {
     return (
         <>
-            <div className="movie">
-                <img src="moment/Casper.jpg" className="poster" />
-                <div className="movie-details">
+            <div className="movie1">
+                <img src="moment/Casper.jpg" className="poster1" />
+                <div className="movie1-details1">
                     <div className="box">
                         <h4 className="title">Casper</h4>
                         <p className="rating">9.7</p>

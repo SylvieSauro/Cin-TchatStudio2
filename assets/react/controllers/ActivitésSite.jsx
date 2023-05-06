@@ -1,21 +1,22 @@
 import React from "react";
 
-const ActivitésSite = (movie) => {
-    console.log(movie.info);
+const ActivitésSite = (movie1) => {
+    console.log(movie1.info);
+
     let img_path = "https://image.tmdb.org/t/p/w500";
     return (
         <>
-
-            <div className="movie">
+            <div className="movie1">
                 <img src={img_path + movie.info.poster_path} className="poster" />
-                <div className="movie-details">
+                <li key={movie1.info.id}></li>
+                <div className="movie1-details1">
                     <div className="box">
-                        <h4 className="title">{movie.info.title}</h4>
-                        <p className="rating">{movie.info.vote_average}</p>
+                        <h4 className="title">{movie1.info.title}</h4>
+                        <p className="rating">{movie1.info.vote_average}</p>
                     </div>
                     <div className="overview">
                         <h1>overview</h1>
-                        {movie.info.overview}
+                        {movie1.info.overview}
                     </div>
                 </div>
             </div>

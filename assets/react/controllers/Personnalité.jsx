@@ -3,9 +3,9 @@ import React from 'react';
 const Personnalité = () => {
     return (
         <>
-            <div className="movie">
+            <div className="movie1">
                 <img src="pers/PullmanB.jpg" className="personnage" />
-                <div className="movie-details">
+                <div className="movie1-details1">
                     <div className="box">
                         <h4 className="title">P Pullman</h4>
                     </div>
